@@ -1,7 +1,8 @@
 const { src, dest, watch, series, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
-const autoprefixer = require("gulp-autoprefixer");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync").create();
 const concat = require("gulp-concat");
 
@@ -17,7 +18,7 @@ const paths = {
 function styles() {
   return src("src/scss/main.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer({ cascade: false }))
+    .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
     .pipe(dest(paths.dist + "css"))
     .pipe(browserSync.stream());
