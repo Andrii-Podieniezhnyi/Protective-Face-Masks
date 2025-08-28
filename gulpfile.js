@@ -24,25 +24,24 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-// HTML
+
 function html() {
   return src(paths.html)
     .pipe(dest(paths.dist))
     .pipe(browserSync.stream());
 }
 
-// Images
+
 function images() {
   return src(paths.images)
     .pipe(dest(paths.dist + "images"))
     .pipe(browserSync.stream());
 }
 
-// JS (поки простий, просто копіює)
+
 function scripts() {
   return src("src/js/**/*.js")
     .pipe(concat("main.js"))
-    // .pipe(uglify()) // якщо захочеш мінімізувати
     .pipe(dest(paths.dist + "js"))
     .pipe(browserSync.stream());
 }
