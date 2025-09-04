@@ -1,0 +1,20 @@
+@use "variables" as vars;
+
+.container {
+    max-width: vars.$container-width;
+    margin: 0 auto;
+    padding: 0 15px;
+
+
+    //  планшети
+
+    @media (max-width: vars.$bp-lg) {
+        max-width: 100%;
+    }
+
+    //  мобільні
+
+    @media (max-width: vars.$bp-md) {
+        padding: 0 10px;
+    }
+}
