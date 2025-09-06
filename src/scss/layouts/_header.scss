@@ -2,10 +2,27 @@
         margin-top: 24px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .logo{
         width: 161px;
         height: 40px;
         background: rgba(196, 196, 196, 1);
+    }
+
+    .nav{
+        display: flex;
+        gap: 45px;
+        align-items: center;
+    }
+
+    .btn-primary-container{
+        padding: 12px 24px;
+        background-color: rgba(27, 95, 193, 1);
+        color: rgba(255, 255, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
     }
