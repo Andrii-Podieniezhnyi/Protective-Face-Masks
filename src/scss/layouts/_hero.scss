@@ -1,4 +1,4 @@
-@use "variables" as vars;
+@use "../base/variables" as vars;
 
 .hero{
     &__inner{
@@ -14,7 +14,7 @@
         color: vars.$primary-color-yellow;
         font-weight: 500;
         line-height: 30px;
-        font-family: $font-family-alt;
+        font-family: vars.$font-family-alt;
     }
 
     &__title{
@@ -22,7 +22,7 @@
         font-size: 72px;
         font-weight: 700;
         line-height: 82px;
-        font-family: $font-family-alt;
+        font-family: vars.$font-family-alt;
         margin-top: 30px;
         margin-bottom: 40px;
     }
@@ -36,6 +36,6 @@
     }
 
     &__buttons{
-        display: flex;;
+        display: flex;
     }
 }
