@@ -33,9 +33,8 @@ function html() {
 
 
 function images() {
-  return src(paths.images)
+  return src(paths.images, {encoding: false})
     .pipe(dest(paths.dist + "images"))
-    .pipe(browserSync.stream());
 }
 
 
