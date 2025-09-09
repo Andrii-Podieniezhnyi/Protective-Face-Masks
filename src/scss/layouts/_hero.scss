@@ -1,12 +1,21 @@
 @use "../base/variables" as vars;
 
 .hero{
-    &__inner{
-        margin-top: 76px;
+
+    position: relative;
+    margin-top: 0;
+
+    &__inner {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
     }
 
     &__content{
+        margin-top: 185px;
         width: 50%;
     }
 
@@ -37,5 +46,26 @@
 
     &__buttons{
         display: flex;
+    }
+
+    &__image-container {
+        width: 50%;
+    }
+
+    // background delivery image
+    &__bg {
+        position: absolute;
+        top: -72px;
+        width: 48vw;
+        z-index: 1;
+    }
+
+    // Woman-with-mask image 
+    &__fg {
+        position: absolute;
+        top: 52px;
+        right: 115px;
+        max-width: 400px;
+        z-index: 2;
     }
 }
