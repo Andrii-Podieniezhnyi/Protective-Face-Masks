@@ -1,0 +1,12 @@
+.btn {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+        &--primary {
+            background-color: vars.$primary-color-blue;
+            color: rgba(255, 255, 255, 1);
+        }
+}
