@@ -1,0 +1,6 @@
+@use "../base/variables" as vars;
+
+%btns_primary_secondary_font_base{
+    font-family: vars.$font-family-alt;
+    font-size: 14px;
+}
