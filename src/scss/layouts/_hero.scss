@@ -1,72 +1,117 @@
-@use "../base/variables" as vars;
+@use '../base/variables' as vars;
 
-.hero{
+.hero {
+  overflow: visible;
 
+  /* фон "доставка" */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;          
+    right: 0;
+    left: 50vw;      
+    height: 60vh;    
+    z-index: 0;      
+    background-image: url("../images/hero_section/delivery.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__inner {
     position: relative;
-    margin-top: 0;
+    z-index: 2; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__content {
+    width: 50%;
+    margin-top: 185px;
+  }
+
+  &__subtitle {
+    color: vars.$primary-color-yellow;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: vars.$font-family-alt;
+  }
+
+  &__title {
+    color: vars.$color-text-title;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 82px;
+    font-family: vars.$font-family-alt;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: vars.$color-text-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__image-container {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__fg {
+    position: absolute;
+    right: 0px;
+    top: -243px;
+    max-width: 500px;
+    z-index: 3;
+  }
+
+  /* --- адаптив --- */
+  @media (max-width: vars.$bp-lg) {
+    &::before { left: 55vw;  height: 50vh;}
+    &__content { margin-top: 120px; width: 55%; }
+    &__fg { right: 65px; max-width: 420px; top: -240px; }
+  }
+
+  @media (max-width: vars.$bp-md) {
+    &::before { display: none; }
 
     &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-        position: relative;
-        z-index: 2;
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
     }
 
-    &__content{
-        margin-top: 185px;
-        width: 50%;
-    }
-
-    &__subtitle{
-        color: vars.$primary-color-yellow;
-        font-weight: 500;
-        line-height: 30px;
-        font-family: vars.$font-family-alt;
-    }
-
-    &__title{
-        color: vars.$color-text-title;
-        font-size: 72px;
-        font-weight: 700;
-        line-height: 82px;
-        font-family: vars.$font-family-alt;
-        margin-top: 30px;
-        margin-bottom: 40px;
-    }
-
-    &__text{
-        color: vars.$color-text-main;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        margin-bottom: 54px;
-    }
-
-    &__buttons{
-        display: flex;
-        gap: 20px;
+    &__content {
+      width: 100%;
+      margin-top: 48px;
+      padding: 0 16px;
     }
 
     &__image-container {
-        width: 50%;
+      width: 100%;
+      position: static;
     }
 
-    // background delivery image
-    &__bg {
-        position: absolute;
-        top: -72px;
-        width: 48.5vw;
-        z-index: 1;
-    }
-
-    // Woman-with-mask image 
     &__fg {
-        position: absolute;
-        top: 52px;
-        right: 115px;
-        max-width: 400px;
-        z-index: 2;
+      position: static;
+      width: 80%;
+      margin: 0 auto 24px;
+      display: block;
     }
+
+    &__buttons {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }
