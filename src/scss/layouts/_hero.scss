@@ -79,7 +79,7 @@
   @media (max-width: vars.$bp-lg) {
     &::before { left: 55vw;  height: 50vh;}
     &__content { margin-top: 120px; width: 55%; }
-    &__fg { right: 65px; max-width: 420px; top: -240px; }
+    &__fg { right: 65px; max-width: 35vw; top: -240px; }
   }
 
   @media (max-width: vars.$bp-md) {
