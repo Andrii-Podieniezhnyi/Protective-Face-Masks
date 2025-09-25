@@ -3,7 +3,8 @@
 .hero {
   overflow: visible;
 
-  /* фон "доставка" */
+  // фон "доставка"
+
   &::before {
     content: "";
     position: absolute;
@@ -75,7 +76,7 @@
     z-index: 3;
   }
 
-  /* --- адаптив --- */
+  // --- адаптив --- 
   @media (max-width: vars.$bp-lg) {
     &::before { left: 55vw;  height: 50vh;}
     &__content { margin-top: 120px; width: 55%; }
