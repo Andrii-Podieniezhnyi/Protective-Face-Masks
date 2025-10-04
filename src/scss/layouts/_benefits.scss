@@ -1,0 +1,38 @@
+@use "../base/variables" as vars;
+
+.benefits{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(247, 253, 251, 1);;
+
+    &__section{
+        display: flex;
+        gap: 31px;
+        margin-bottom: 60px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 20px;
+        width: 30%;
+    }
+
+    &__text-block{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__title{
+        h2{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    &__description{
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
