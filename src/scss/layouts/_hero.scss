@@ -2,6 +2,7 @@
 
 .hero {
   overflow: visible;
+  height: 60vh;
 
   // фон "доставка"
 
@@ -10,7 +11,7 @@
     position: absolute;
     top: 0;          
     right: 0;
-    left: 50vw;      
+    left: 52vw;      
     height: 60vh;    
     z-index: 0;      
     background-image: url("../images/hero_section/delivery.png");
@@ -71,7 +72,7 @@
   &__fg {
     position: absolute;
     right: 0px;
-    top: -243px;
+    top: -272px;
     max-width: 500px;
     z-index: 3;
   }
