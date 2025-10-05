@@ -21,17 +21,17 @@
   }
 
   &__inner {
-    position: relative;
     z-index: 2; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    height: inherit; 
   }
 
   &__content {
     width: 50%;
-    margin-top: 185px;
+    margin-top: 50px;
   }
 
   &__subtitle {
@@ -65,17 +65,10 @@
   }
 
   &__image-container {
+    display: flex;
+    justify-content: flex-end;
     width: 50%;
-    position: relative;
     z-index: 2;
-  }
-
-  &__fg {
-    position: absolute;
-    right: 0px;
-    top: -272px;
-    max-width: 500px;
-    z-index: 3;
   }
 
   // --- адаптив --- 
