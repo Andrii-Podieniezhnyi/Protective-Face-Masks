@@ -1,0 +1,38 @@
+@use "../base/variables" as vars;
+
+.n95-respirators_block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+    margin-top: 80px;
+
+    .n95-respirators-top-block, .n95-respirators-mid-block {
+        display: flex;
+        gap: 47px;
+
+        
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+    
+        &__title {
+            font-family: vars.$font-family-alt;
+            font-size: 48px;
+            color: vars.$color-text-title;
+            line-height: 50px;
+            font-weight: 700;
+        }
+    
+        &__description {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+    }
+
+    .n95-respirators-mid-block__img{
+        width: 48%;
+    }
+}
